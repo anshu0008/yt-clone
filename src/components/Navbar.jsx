@@ -19,7 +19,7 @@ const Navbar = () =>{
     zIndex={1000}
     direction="row"
     alignItems="center"
-    p={2}
+    p={0}
     sx={{
       position: "sticky",
       background: "#0f0f0f",
@@ -28,10 +28,10 @@ const Navbar = () =>{
       color: "white",
     }}
   >
-    <Box style={{ display: "flex", alignItems: "center" }} gap={3}>
+    <Box sx={{ display: "flex", alignItems: "center",height:'100%',ml:'10px' }} gap={1}>
       <img src={!handleClick ? "https://static.thenounproject.com/png/4676033-200.png" :'https://cdn-icons-png.flaticon.com/512/6714/6714978.png'} alt='light_mode' className="menu_icon_hover" height={45} sx={{display:{sm:"block",xs:"none"}}} onClick={()=>setHandleClick(!handleClick)} />
       <Link to="/">
-        <img src={logo} alt="logo" height={45} />
+        <img src={logo} alt="logo" height={70} style={{width:'auto',objectFit:'contain'}} />
       </Link>
     </Box>
     <Box>
